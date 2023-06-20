@@ -1,0 +1,60 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="format-detection" content="telephone=no"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="black"><link rel="icon" href="/images/icons/favicon-16x16.png?v=2.8.0" type="image/png" sizes="16x16"><link rel="icon" href="/images/icons/favicon-32x32.png?v=2.8.0" type="image/png" sizes="32x32"><meta name="description" content="快捷键： U（Undefine）：取消一个地方已有的数据类型定义   D（Data）：即让某一个位置变成数据。一直按D键，数据类型将会以1字节（byte&#x2F;db）、2字节（word&#x2F;dw）、4字节（dword&#x2F;dd）、8字节（qword&#x2F;dq）进行循环   C（code）：即让某一个位置变成指令 A(ASCII):会以该位置为起点定义一个以”\0”结尾的字符串">
+<meta property="og:type" content="article">
+<meta property="og:title" content="cyny666&#39;s world">
+<meta property="og:url" content="http://example.com/2023/06/18/5.2.1%20IDA%E4%BD%BF%E7%94%A8/index.html">
+<meta property="og:site_name" content="cyny666&#39;s world">
+<meta property="og:description" content="快捷键： U（Undefine）：取消一个地方已有的数据类型定义   D（Data）：即让某一个位置变成数据。一直按D键，数据类型将会以1字节（byte&#x2F;db）、2字节（word&#x2F;dw）、4字节（dword&#x2F;dd）、8字节（qword&#x2F;dq）进行循环   C（code）：即让某一个位置变成指令 A(ASCII):会以该位置为起点定义一个以”\0”结尾的字符串">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2023-06-18T08:32:07.523Z">
+<meta property="article:modified_time" content="2023-04-28T08:49:09.721Z">
+<meta property="article:author" content="cyny666">
+<meta property="article:tag" content="code and failure">
+<meta name="twitter:card" content="summary"><title>[ 文章无标题 ] | cyny666's world</title><link ref="canonical" href="http://example.com/2023/06/18/5.2.1%20IDA%E4%BD%BF%E7%94%A8/"><link rel="dns-prefetch" href="https://cdn.jsdelivr.net"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.12.1/css/all.min.css" type="text/css"><link rel="stylesheet" href="/css/index.css?v=2.8.0"><link rel="stylesheet" href="css/custom.css"><script>var Stun = window.Stun || {};
+var CONFIG = {
+  root: '/',
+  algolia: undefined,
+  assistSearch: undefined,
+  fontIcon: {"prompt":{"success":"fas fa-check-circle","info":"fas fa-arrow-circle-right","warning":"fas fa-exclamation-circle","error":"fas fa-times-circle"},"copyBtn":"fas fa-copy"},
+  sidebar: {"offsetTop":"20px","tocMaxDepth":6},
+  header: {"enable":true,"showOnPost":true,"scrollDownIcon":false},
+  postWidget: {"endText":true},
+  nightMode: {"enable":true},
+  back2top: {"enable":true},
+  codeblock: {"style":"default","highlight":"light","wordWrap":false},
+  reward: false,
+  fancybox: false,
+  zoomImage: {"gapAside":"20px"},
+  galleryWaterfall: undefined,
+  lazyload: false,
+  pjax: undefined,
+  externalLink: {"icon":{"enable":true,"name":"fas fa-external-link-alt"}},
+  shortcuts: undefined,
+  prompt: {"copyButton":"复制","copySuccess":"复制成功","copyError":"复制失败"},
+  sourcePath: {"js":"js","css":"css","images":"images"},
+};
+
+window.CONFIG = CONFIG;</script><meta name="generator" content="Hexo 6.3.0"></head><body><div class="container" id="container"><header class="header" id="header"><div class="header-inner"><nav class="header-nav header-nav--fixed"><div class="header-nav-inner"><div class="header-nav-menubtn"><i class="fas fa-bars"></i></div><div class="header-nav-menu"><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/"><span class="header-nav-menu-item__icon"><i class="fas fa-home"></i></span><span class="header-nav-menu-item__text">首页</span></a></div><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/archives/"><span class="header-nav-menu-item__icon"><i class="fas fa-folder-open"></i></span><span class="header-nav-menu-item__text">归档</span></a></div></div><div class="header-nav-mode"><div class="mode"><div class="mode-track"><span class="mode-track-moon"></span><span class="mode-track-sun"></span></div><div class="mode-thumb"></div></div></div></div></nav><div class="header-banner"><div class="header-banner-info"><div class="header-banner-info__title">Welcome to cyny666's world</div><div class="header-banner-info__subtitle">A world with code and failure</div></div></div></div></header><main class="main" id="main"><div class="main-inner"><div class="content-wrap" id="content-wrap"><div class="content" id="content"><!-- Just used to judge whether it is an article page--><div id="is-post"></div><div class="post"><header class="post-header"><h1 class="post-title">[ 文章无标题 ]</h1><div class="post-meta"><span class="post-meta-item post-meta-item--createtime"><span class="post-meta-item__icon"><i class="far fa-calendar-plus"></i></span><span class="post-meta-item__info">发表于</span><span class="post-meta-item__value">2023-06-18</span></span><span class="post-meta-item post-meta-item--updatetime"><span class="post-meta-item__icon"><i class="far fa-calendar-check"></i></span><span class="post-meta-item__info">更新于</span><span class="post-meta-item__value">2023-04-28</span></span></div></header><div class="post-body"><p>快捷键：</p>
+<p>U（Undefine）：取消一个地方已有的数据类型定义  </p>
+<p>D（Data）：即让某一个位置变成数据。一直按D键，数据类型将会以1字节（byte&#x2F;db）、2字节（word&#x2F;dw）、4字节（dword&#x2F;dd）、8字节（qword&#x2F;dq）进行循环  </p>
+<p>C（code）：即让某一个位置变成指令</p>
+<p>A(ASCII):会以该位置为起点定义一个以”\0”结尾的字符串类型</p>
+<p>*：将此处定义为一个数组，此时弹出一个对话框，用来设置数组的属性</p>
+<p>O(offset):即将此处定义为一个地址偏移</p>
+<p>删除函数：在函数窗口中选中函数后，按Delete键</p>
+<p>定义函数：在反汇编窗口中选中对应行后，按P键</p>
+<p>修改函数参数：在函数窗口中选中并按CTRL+E组合键，或在反汇编窗口的函数内部按ALT+P组合键</p>
+<p>后退到上一位置：快捷键ESC</p>
+<p>前进到下一位置：快捷键Ctrl+Enter</p>
+<p>跳转到某一个特定位置：快捷键G，然后可以输入地址&#x2F;已经定义的名称</p>
+<p>跳转到某一区段：快捷键Ctrl+S，然后选择区段即可</p>
+<p>选中变量、函数后按Y键，弹出对话框，从中输入正确的C语言类型，IDA就可以解析并自动应用这个类型</p>
+<p>技巧：</p>
+<p>IDA的反汇编窗口中的各种操作在选中时和未选中时会有不同的功能。</p>
+<p>IDA的反汇编窗口中的部分快捷键在多次使用的时候会有不同功能</p>
+<p>IDA的右键快捷菜单中会标注各种快捷键</p>
+<p>IDA的对话框的按钮可以通过按其首字母来取代鼠标点击</p>
+<p>IDApython：按Alt+F7组合键，或者选择”File→Script file”,可以执行python脚本文件；输出窗口也有一个Python的Console框，可以临时执行Python语句；按shift+F2组合键，或选择”File→Script command”菜单命令，可以打开脚本面板，将”Scripting language”改为”Python”，即可获得一个简易的编辑器</p>
+<p>IDA的菜单栏”View→Open subviews”下可以打开各种类型的窗口</p>
+<p>String窗口：按shift+F12组合键打开，可以识别程序中的字符串，双击即可在反汇编窗口中定位到目标字符串。</p>
+<p>十六进制窗口：默认打开，可以按F2键对数据库中的数据进行修改，修改后再次按F2即可应用修改</p>
+</div><footer class="post-footer"><div class="post-ending ending"><div class="ending__text">------ 本文结束，感谢您的阅读 ------</div></div><div class="post-copyright copyright"><div class="copyright-author"><span class="copyright-author__name">本文作者: </span><span class="copyright-author__value"><a href="http://example.com">cyny666</a></span></div><div class="copyright-link"><span class="copyright-link__name">本文链接: </span><span class="copyright-link__value"><a href="http://example.com/2023/06/18/5.2.1%20IDA%E4%BD%BF%E7%94%A8/">http://example.com/2023/06/18/5.2.1%20IDA%E4%BD%BF%E7%94%A8/</a></span></div><div class="copyright-notice"><span class="copyright-notice__name">版权声明: </span><span class="copyright-notice__value">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en" rel="external nofollow" target="_blank">BY-NC-SA</a> 许可协议。转载请注明出处！</span></div></div><nav class="post-paginator paginator"><div class="paginator-prev"><a class="paginator-prev__link" href="/2023/06/18/5.2.2%20IDA%E8%BF%9B%E9%98%B6/"><span class="paginator-prev__icon"><i class="fas fa-angle-left"></i></span><span class="paginator-prev__text">[ 文章无标题 ]</span></a></div><div class="paginator-next"><a class="paginator-next__link" href="/2023/06/18/5.1.3%20%E6%B1%87%E7%BC%96%E8%AF%AD%E8%A8%80%E5%9F%BA%E6%9C%AC%E7%9F%A5%E8%AF%86/"><span class="paginator-prev__text">[ 文章无标题 ]</span><span class="paginator-next__icon"><i class="fas fa-angle-right"></i></span></a></div></nav></footer></div></div></div><div class="sidebar-wrap" id="sidebar-wrap"><aside class="sidebar" id="sidebar"><div class="sidebar-nav"><span class="sidebar-nav-toc current">文章目录</span><span class="sidebar-nav-ov">站点概览</span></div><section class="sidebar-toc"></section><!-- ov = overview--><section class="sidebar-ov hide"><div class="sidebar-ov-author"><div class="sidebar-ov-author__avatar"><img class="sidebar-ov-author__avatar_img" src="/images/icons/obj.jpg" alt="avatar"></div><p class="sidebar-ov-author__text">cyny666</p></div><div class="sidebar-ov-state"><a class="sidebar-ov-state-item sidebar-ov-state-item--posts" href="/archives/"><div class="sidebar-ov-state-item__count">12</div><div class="sidebar-ov-state-item__name">归档</div></a></div><div class="sidebar-ov-cc"><a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en" target="_blank" rel="noopener" data-popover="知识共享许可协议" data-popover-pos="up"><img src="/images/cc-by-nc-sa.svg"></a></div></section><div class="sidebar-reading"><div class="sidebar-reading-info"><span class="sidebar-reading-info__text">你已阅读了 </span><span class="sidebar-reading-info__num">0</span><span class="sidebar-reading-info__perc">%</span></div><div class="sidebar-reading-line"></div></div></aside></div><div class="clearfix"></div></div></main><footer class="footer" id="footer"><div class="footer-inner"><div><span>Copyright © 2023</span><span class="footer__icon"><i class="fas fa-heart"></i></span><span>cyny666</span></div><div><span>由 <a href="http://hexo.io/" title="Hexo" target="_blank" rel="noopener">Hexo</a> 强力驱动</span><span> v6.3.0</span><span class="footer__devider">|</span><span>主题 - <a href="https://github.com/liuyib/hexo-theme-stun/" title="Stun" target="_blank" rel="noopener">Stun</a></span><span> v2.8.0</span></div></div></footer><div class="loading-bar" id="loading-bar"><div class="loading-bar__progress"></div></div><div class="back2top" id="back2top"><span class="back2top__icon"><i class="fas fa-rocket"></i></span></div></div><script src="https://cdn.jsdelivr.net/npm/jquery@v3.4.1/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/velocity-animate@1.5.2/velocity.min.js"></script><script src="https://cdn.jsdelivr.net/npm/velocity-animate@1.5.2/velocity.ui.min.js"></script><script src="/js/utils.js?v=2.8.0"></script><script src="/js/stun-boot.js?v=2.8.0"></script><script src="/js/scroll.js?v=2.8.0"></script><script src="/js/header.js?v=2.8.0"></script><script src="/js/sidebar.js?v=2.8.0"></script></body></html>

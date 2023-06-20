@@ -1,0 +1,145 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="format-detection" content="telephone=no"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="black"><link rel="icon" href="/images/icons/favicon-16x16.png?v=2.8.0" type="image/png" sizes="16x16"><link rel="icon" href="/images/icons/favicon-32x32.png?v=2.8.0" type="image/png" sizes="32x32"><meta name="description" content="just fight to be a better myself">
+<meta property="og:type" content="website">
+<meta property="og:title" content="cyny666&#39;s world">
+<meta property="og:url" content="http://example.com/index.html">
+<meta property="og:site_name" content="cyny666&#39;s world">
+<meta property="og:description" content="just fight to be a better myself">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:author" content="cyny666">
+<meta property="article:tag" content="code and failure">
+<meta name="twitter:card" content="summary"><title>cyny666's world</title><link ref="canonical" href="http://example.com/index.html"><link rel="dns-prefetch" href="https://cdn.jsdelivr.net"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.12.1/css/all.min.css" type="text/css"><link rel="stylesheet" href="/css/index.css?v=2.8.0"><link rel="stylesheet" href="css/custom.css"><script>var Stun = window.Stun || {};
+var CONFIG = {
+  root: '/',
+  algolia: undefined,
+  assistSearch: undefined,
+  fontIcon: {"prompt":{"success":"fas fa-check-circle","info":"fas fa-arrow-circle-right","warning":"fas fa-exclamation-circle","error":"fas fa-times-circle"},"copyBtn":"fas fa-copy"},
+  sidebar: {"offsetTop":"20px","tocMaxDepth":6},
+  header: {"enable":true,"showOnPost":true,"scrollDownIcon":false},
+  postWidget: {"endText":true},
+  nightMode: {"enable":true},
+  back2top: {"enable":true},
+  codeblock: {"style":"default","highlight":"light","wordWrap":false},
+  reward: false,
+  fancybox: false,
+  zoomImage: {"gapAside":"20px"},
+  galleryWaterfall: undefined,
+  lazyload: false,
+  pjax: undefined,
+  externalLink: {"icon":{"enable":true,"name":"fas fa-external-link-alt"}},
+  shortcuts: undefined,
+  prompt: {"copyButton":"复制","copySuccess":"复制成功","copyError":"复制失败"},
+  sourcePath: {"js":"js","css":"css","images":"images"},
+};
+
+window.CONFIG = CONFIG;</script><meta name="generator" content="Hexo 6.3.0"></head><body><div class="container" id="container"><header class="header" id="header"><div class="header-inner"><nav class="header-nav header-nav--fixed"><div class="header-nav-inner"><div class="header-nav-menubtn"><i class="fas fa-bars"></i></div><div class="header-nav-menu"><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/"><span class="header-nav-menu-item__icon"><i class="fas fa-home"></i></span><span class="header-nav-menu-item__text">首页</span></a></div><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/archives/"><span class="header-nav-menu-item__icon"><i class="fas fa-folder-open"></i></span><span class="header-nav-menu-item__text">归档</span></a></div></div><div class="header-nav-mode"><div class="mode"><div class="mode-track"><span class="mode-track-moon"></span><span class="mode-track-sun"></span></div><div class="mode-thumb"></div></div></div></div></nav><div class="header-banner"><div class="header-banner-info"><div class="header-banner-info__title">Welcome to cyny666's world</div><div class="header-banner-info__subtitle">A world with code and failure</div></div></div></div></header><main class="main" id="main"><div class="main-inner"><div class="content-wrap" id="content-wrap"><div class="content content-home" id="content"><section class="postlist"><article class="postlist-item post"><header class="post-header"><h1 class="post-title"><a class="post-title__link" href="/2023/06/18/5.1.2%20%E5%8F%AF%E6%89%A7%E8%A1%8C%E6%96%87%E4%BB%B6/">[ 文章无标题 ]</a></h1><div class="post-meta"><span class="post-meta-item post-meta-item--createtime"><span class="post-meta-item__icon"><i class="far fa-calendar-plus"></i></span><span class="post-meta-item__info">发表于</span><span class="post-meta-item__value">2023-06-18</span></span><span class="post-meta-item post-meta-item--updatetime"><span class="post-meta-item__icon"><i class="far fa-calendar-check"></i></span><span class="post-meta-item__info">更新于</span><span class="post-meta-item__value">2023-04-16</span></span></div></header><div class="post-body"><div class="post-excerpt"><p>Windows下使用的PE（Portable Executable）可执行文件 </p>
+<p>Linux系统下使用的是ELF（Executable and Linkable Format）可执行文件  </p>
+<p>两种文件都是由COFF（Common Object File Format）格式发展而来的  </p>
+<p>PE文件由<strong>DOS头、PE文件头、节表及各节数据</strong>组成：同时，如果需要引用外部的动态链接库，则有导入表：如果自己可以提供函数给其他程序来动态链接（常见于DLL文件），则有导出表  </p>
+<p>ELF文件由<strong>ELF头、各节数据、节表、字符串段、符号表</strong>组成。</p>
+<p>节是程序中各部分的逻辑划分。.text或者.code代表代码节、.data代表数据节等。</p>
+</div></div></article><article class="postlist-item post"><header class="post-header"><h1 class="post-title"><a class="post-title__link" href="/2023/06/18/%E5%B8%B8%E8%A7%81%E6%B1%87%E7%BC%96%E6%8C%87%E4%BB%A4/">[ 文章无标题 ]</a></h1><div class="post-meta"><span class="post-meta-item post-meta-item--createtime"><span class="post-meta-item__icon"><i class="far fa-calendar-plus"></i></span><span class="post-meta-item__info">发表于</span><span class="post-meta-item__value">2023-06-18</span></span><span class="post-meta-item post-meta-item--updatetime"><span class="post-meta-item__icon"><i class="far fa-calendar-check"></i></span><span class="post-meta-item__info">更新于</span><span class="post-meta-item__value">2023-05-16</span></span></div></header><div class="post-body"><div class="post-excerpt"><p>DB:用来定义操作数占用的字节数</p>
+<p>jZ：jump if zero</p>
+<p>NOP:空指令，意味着什么都不做的意思</p>
+<p>POPF&#x2F;POPFD&#x2F;POPFQ指令从RSP&#x2F;ESP&#x2F;SP指向的堆栈中取出OperandSize大小的数据加载至RFLAGS&#x2F;EFLAGS&#x2F;FLAGS寄存器，并将堆栈指针寄存器RSP&#x2F;ESP&#x2F;SP增加对应OperandSize大小。</p>
+</div></div></article><article class="postlist-item post"><header class="post-header"><h1 class="post-title"><a class="post-title__link" href="/2023/06/18/5.5.3%20%E5%8F%8D%E8%B0%83%E8%AF%95/">[ 文章无标题 ]</a></h1><div class="post-meta"><span class="post-meta-item post-meta-item--createtime"><span class="post-meta-item__icon"><i class="far fa-calendar-plus"></i></span><span class="post-meta-item__info">发表于</span><span class="post-meta-item__value">2023-06-18</span></span><span class="post-meta-item post-meta-item--updatetime"><span class="post-meta-item__icon"><i class="far fa-calendar-check"></i></span><span class="post-meta-item__info">更新于</span><span class="post-meta-item__value">2023-05-21</span></span></div></header><div class="post-body"><div class="post-excerpt"><p>1.Windows API</p>
+<p>Windows操作系统提供了大量可供检测进程状态的API，通过调用这些API，程序可以检测当前是否正在被调试</p>
+<p>（1）IsDebuggerPrensent（）</p>
+<p>（2）CheckRemoteDebuggerPresent（）</p>
+<p>（3）NtQueryInformationProcess（）</p>
+<p>绕过API的调试检测最可靠有效的办法是Hook相应的API</p>
+<p>2.断点检测</p>
+<p>软件断点往往通过修改内存而实现（注意有别于内存断点），对内存是否被修改进行检测，便可以探测该类断点的存在。</p>
+<p>对于x86架构，硬件断点是通过设置调试寄存器（包括DR0-DR7）来实现的</p>
+<ol start="3">
+<li></li>
+</ol>
+</div></div></article><article class="postlist-item post"><header class="post-header"><h1 class="post-title"><a class="post-title__link" href="/2023/06/18/5.5.2%20%E5%8A%A0%E5%AF%86/">[ 文章无标题 ]</a></h1><div class="post-meta"><span class="post-meta-item post-meta-item--createtime"><span class="post-meta-item__icon"><i class="far fa-calendar-plus"></i></span><span class="post-meta-item__info">发表于</span><span class="post-meta-item__value">2023-06-18</span></span><span class="post-meta-item post-meta-item--updatetime"><span class="post-meta-item__icon"><i class="far fa-calendar-check"></i></span><span class="post-meta-item__info">更新于</span><span class="post-meta-item__value">2023-05-16</span></span></div></header><div class="post-body"><div class="post-excerpt"><p>对于二进制的加密大体上可以分为<strong>数据加密、代码加密、算法加密</strong></p>
+<p>虚拟机保护的大范围使用最早出现在加密壳软件中，其中最具代表性的是VMprotect，虚拟机保护壳规模相对较小，目的是尽可能地对原始程序代码、算法逻辑进行混淆、模糊和隐藏</p>
+</div></div></article><article class="postlist-item post"><header class="post-header"><h1 class="post-title"><a class="post-title__link" href="/2023/06/18/5.5.1%20%E6%8A%B5%E5%BE%A1%E9%9D%99%E6%80%81%E5%88%86%E6%9E%90/">[ 文章无标题 ]</a></h1><div class="post-meta"><span class="post-meta-item post-meta-item--createtime"><span class="post-meta-item__icon"><i class="far fa-calendar-plus"></i></span><span class="post-meta-item__info">发表于</span><span class="post-meta-item__value">2023-06-18</span></span><span class="post-meta-item post-meta-item--updatetime"><span class="post-meta-item__icon"><i class="far fa-calendar-check"></i></span><span class="post-meta-item__info">更新于</span><span class="post-meta-item__value">2023-05-16</span></span></div></header><div class="post-body"><div class="post-excerpt"><p>干扰反编译最简单的方法就是在代码中增加花指令。花指令是指在程序中完全冗余，不影响程序功能却会对逆向工程产生干扰的指令，如下</p>
+<figure class="highlight plaintext"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">push ebp</span><br><span class="line">pushfd</span><br><span class="line">add esp, 0xd</span><br><span class="line">nop</span><br><span class="line">sub esp,0xd</span><br><span class="line">popfd</span><br><span class="line">mov ebp,esp</span><br><span class="line">sub esp,0x100</span><br></pre></td></tr></table></div></figure>
+
+<p>另一种常见的干扰静态分析的方法是在正常的指令中插入一个特定的字节，并在该字节前加入向该字节后的跳转语句，以保证实际执行的指令效果不变。对于这一特定的字节，要求其是一条较长指令的首字节，插入的这个字节被称为脏字节</p>
+<p>另一种常见的抵御静态分析的手段是代码字修改（SMC）</p>
+<p>解决方案：1.静态分析SMC代码的自修改流程，自行实现该SMC过程，并将代码patch为真正执行的代码，即可继续进行静态分析；2.使用动态分析的方法，在代码已被解密完毕的位置设置断点，然后使用调试器跟踪真正执行的代码，或者dump已经解密完毕的代码，交给IDA进行静态分析</p>
+</div></div></article><article class="postlist-item post"><header class="post-header"><h1 class="post-title"><a class="post-title__link" href="/2023/06/18/5.4.3%20%E7%AC%AC%E4%B8%89%E6%96%B9%E5%BA%93%E8%AF%86%E5%88%AB/">[ 文章无标题 ]</a></h1><div class="post-meta"><span class="post-meta-item post-meta-item--createtime"><span class="post-meta-item__icon"><i class="far fa-calendar-plus"></i></span><span class="post-meta-item__info">发表于</span><span class="post-meta-item__value">2023-06-18</span></span><span class="post-meta-item post-meta-item--updatetime"><span class="post-meta-item__icon"><i class="far fa-calendar-check"></i></span><span class="post-meta-item__info">更新于</span><span class="post-meta-item__value">2023-05-16</span></span></div></header><div class="post-body"><div class="post-excerpt">
+        <h2 id="第三方库识别"   >
+          <a href="#第三方库识别" class="heading-link"><i class="fas fa-link"></i></a><a href="#第三方库识别" class="headerlink" title="第三方库识别"></a>第三方库识别</h2>
+      <p>1.字符串识别</p>
+<p>很多第三方库会将版权信息和该库使用的其他字符串以字符串的形式写入库中，在静态编译时，这些字符串会被一并放入二进制文件。通过寻找这些字符串，可以快速判断使用了哪些第三方库</p>
+<p>2.函数签名识别</p>
+<p>在IDA文件菜单中选择”Load File→FLIRT Signature file”</p>
+<p>3.二进制比对识别</p>
+<p>二进制比对的常用工具是BinDiff</p>
+</div></div></article><article class="postlist-item post"><header class="post-header"><h1 class="post-title"><a class="post-title__link" href="/2023/06/18/5.3.4%20IDA%E8%B0%83%E8%AF%95%E5%99%A8/">[ 文章无标题 ]</a></h1><div class="post-meta"><span class="post-meta-item post-meta-item--createtime"><span class="post-meta-item__icon"><i class="far fa-calendar-plus"></i></span><span class="post-meta-item__info">发表于</span><span class="post-meta-item__value">2023-06-18</span></span><span class="post-meta-item post-meta-item--updatetime"><span class="post-meta-item__icon"><i class="far fa-calendar-check"></i></span><span class="post-meta-item__info">更新于</span><span class="post-meta-item__value">2023-05-10</span></span></div></header><div class="post-body"><div class="post-excerpt"></div></div></article><article class="postlist-item post"><header class="post-header"><h1 class="post-title"><a class="post-title__link" href="/2023/06/18/5.3.3%20GDB%E8%B0%83%E8%AF%95/">[ 文章无标题 ]</a></h1><div class="post-meta"><span class="post-meta-item post-meta-item--createtime"><span class="post-meta-item__icon"><i class="far fa-calendar-plus"></i></span><span class="post-meta-item__info">发表于</span><span class="post-meta-item__value">2023-06-18</span></span><span class="post-meta-item post-meta-item--updatetime"><span class="post-meta-item__icon"><i class="far fa-calendar-check"></i></span><span class="post-meta-item__info">更新于</span><span class="post-meta-item__value">2023-05-10</span></span></div></header><div class="post-body"><div class="post-excerpt"><p>GDB的调试方式：</p>
+<p>（1）控制程序执行</p>
+<ul>
+<li>r（run）：启动程序</li>
+<li>c（continue）：让暂停的程序继续执行</li>
+<li>si（step instruction）：汇编指令层面上的单步步入</li>
+<li>ni（next instruction）：汇编层面上的单步步过</li>
+<li>finish：执行到当前函数返回</li>
+</ul>
+<p>（2）查看内存、表达式等</p>
+<ul>
+<li>x&#x2F;dddFFF:ddd代表长度，FFF代表格式，如”x&#x2F;10gx”</li>
+<li>p(print):输出一个表达式的值</li>
+</ul>
+<p>（3）断点相关命令</p>
+<ul>
+<li>b（break）：b* location，location可以为十六进制数、名称等。”*”是指中断在指定的地址，而不是对应的源代码行</li>
+<li>info b:列出所有断点，每个断点会有自己的序号</li>
+<li>del：删除指定序号的断点，如”del 1”</li>
+<li>clear:删除指定位置的断点，如”clear *main”</li>
+</ul>
+<p>(4)修改数据</p>
+<ul>
+<li><p>修改寄存器：set $rax&#x3D;0x100000</p>
+</li>
+<li><p>修改内存：set {要赋值的类型}地址&#x3D;值，形如”set {int}0x405000&#x3D;0x12345”</p>
+<p>注意：<strong>GDB不会在入口处暂停程序</strong></p>
+</li>
+</ul>
+
+        <h2 id="IDA整合"   >
+          <a href="#IDA整合" class="heading-link"><i class="fas fa-link"></i></a><a href="#IDA整合" class="headerlink" title="IDA整合"></a>IDA整合</h2>
+      <p>Pwndbg提供了IDA的整合脚本，只需在IDA中运行Pwndbg目录下的ida_script.py,然后本机Pwndbg链接到IDA上，并使用IDA的各种功能</p>
+</div></div></article><article class="postlist-item post"><header class="post-header"><h1 class="post-title"><a class="post-title__link" href="/2023/06/18/5.3.2%20OLlyDBG%E5%92%8Cx64DBG%E8%B0%83%E8%AF%95/">[ 文章无标题 ]</a></h1><div class="post-meta"><span class="post-meta-item post-meta-item--createtime"><span class="post-meta-item__icon"><i class="far fa-calendar-plus"></i></span><span class="post-meta-item__info">发表于</span><span class="post-meta-item__value">2023-06-18</span></span><span class="post-meta-item post-meta-item--updatetime"><span class="post-meta-item__icon"><i class="far fa-calendar-check"></i></span><span class="post-meta-item__info">更新于</span><span class="post-meta-item__value">2023-05-09</span></span></div></header><div class="post-body"><div class="post-excerpt"><p>X64DBG支持32位和64位程序的调试，并在不断开发、添加新的功能。OllyDBG仅支持32位程序，且已经停止更新。</p>
+<p>1.打开文件：支持用户直接将文件拖入界面，左上区域为反汇编结果的显示区域，左下区域为浏览程序内存数据的区域，右下区域为栈数据的显示区域，右上区域为寄存器的显示区域</p>
+<p>2.控制程序运行：Ctrl+G组合键，可以跳转到目标地址；在反汇编窗口中，按F2键为切换当前地址的断点状态，按F8键为单步步过，按F7为单步步入，按F4键为运行到光标处，按F9键为运行。</p>
+<p>常见的断点位置包括程序内的某个地址、程序调用的某个API。此外可以让程序在操作特定的某一小段内存时中断，其原理为使用CPU内建的硬件断点机制或使用Windows提供的异常处理机制的内存断点。X64DBG在内存窗口&#x2F;栈窗口中选定目标地址，然后单击右键，在弹出的快捷菜单中选择”断点→硬件断点”，可以设置硬件读取和硬件写入断点；在反汇编窗口中，右击目标地址，在弹出的快捷菜单中选择”Breakpoint→Set hardware on execution”，设置硬件执行断点</p>
+<p>3.简单的脱壳：”壳”是一种特殊的程序，对另一个程序进行变换后，利用变换的结果重新生成可执行文件。在运行时，它全部或部分还原存储在可执行文件中的变换结果，然后恢复原程序的执行。壳的存在主要是两方面的需求，压缩壳为了减小程序体积，加密壳则是为了加大破解者的逆向难度（相当于进行一个加密）。</p>
+<p><strong>有的壳注重对代码的压缩</strong>，从而生成更小的可执行文件，如UPX、ASPack等。<strong>有的壳注重对代码的保护</strong>，以阻碍逆向者进行分析为目的，如VMP、ASProtect等。</p>
+<p>脱壳即为将这样的壳去除，还原为最初程序的样子。最广泛的UPX壳。UPX是一个开源的历史悠久的压缩壳。</p>
+<p>脱壳UPX的两种办法：</p>
+<ul>
+<li><p>静态分析：UPX本身即提供脱壳器，使用命令行参数-d即可，但是有时会失败，需要切换使用正确的UPX版本。Windows下内置多个UPX版本的第三方的图形化界面UPXShell工具，可以方便地切换版本。</p>
+</li>
+<li><p>动态方法<strong>（注意需要在Windows  xp下进行）</strong>：可执行文件被操作系统载入后开始执行前，寄存器会存放一些操作系统预先填充好的值，栈的数据也会被设置，壳程序要保留这些数据，以免其被壳段代码不经意间地破坏，在转交控制权前壳需要恢复这些数据，才能让原来的程序正常执行。</p>
+<p>一般情况下，由于已有栈的内容是不应更改的，简单的壳会选择将这样的信息压入栈，x86的pushad可以轻松的将所有寄存器一次性压入栈，UPX也使用了这样的方式，被形象的称为<strong>保护现场</strong>。载入后发现程序最开始为pushad指令。执行后，在栈顶下读取断点，那么当程序执行完后续的还原代码操作，使用popad指令恢复寄存器时就会中断。</p>
+<p>故先单步执行pushad指令，再设置硬件读取断点。在OllyDBG中，右击寄存器区域，在弹出的快捷菜单中选择”HW break [ESP]”即可。x64DBG则可直接在栈窗口中利用右键快捷菜单设置。然后按”F9”运行，再次中断到一个不同的地址。然后在OD的菜单栏选择“调试→硬件断点”，然后删除。然后将光标移到最后的jmp，按F4，使得程序执行，再按F8执行跳转。此时即可dump，在OD中选择”插件→OllyDump→脱壳正在调试的进程”，在弹出的对话框中指定脱壳参数。单击”获取EIP作为OEP”按钮，再单击”脱壳”按钮，保存后完成</p>
+<p>除了IDA的使用，其余请在XP上完成：原因是：</p>
+<ul>
+<li>XP后的系统中带有ASLR（地址空间随机化），程序每次启动需要重定位才可以正常执行，而恢复重定位信息难度高</li>
+<li>从Windows Vista开始，NT内核开始引入MinWin，出现了大量的api-ms-XXXXX的DLL，这导致了相当一部分依赖于NT内核特征的工具出现问题，如在Dump时使用OllyDump的导入表搜索时会受此影响</li>
+<li>从Windows 10开始，部分API有所更改，导致OllyDump的基址无法被正确填入</li>
+</ul>
+</li>
+</ul>
+</div></div></article><article class="postlist-item post"><header class="post-header"><h1 class="post-title"><a class="post-title__link" href="/2023/06/18/5.2.2%20IDA%E8%BF%9B%E9%98%B6/">[ 文章无标题 ]</a></h1><div class="post-meta"><span class="post-meta-item post-meta-item--createtime"><span class="post-meta-item__icon"><i class="far fa-calendar-plus"></i></span><span class="post-meta-item__info">发表于</span><span class="post-meta-item__value">2023-06-18</span></span><span class="post-meta-item post-meta-item--updatetime"><span class="post-meta-item__icon"><i class="far fa-calendar-check"></i></span><span class="post-meta-item__info">更新于</span><span class="post-meta-item__value">2023-04-28</span></span></div></header><div class="post-body"><div class="post-excerpt"><p>如何找到main函数：</p>
+<ul>
+<li><p>main（）函数经常在可执行文件的靠前位置（因为很多链接器都是先处理对象文件后处理静态库）</p>
+</li>
+<li><p>VC的入口处（IDA中的start（）函数）会直接调用main（）函数，在start（）函数中被调用的函数有3个参数，并且返回值被传入exit（）函数，可以重点查看</p>
+</li>
+<li><p>GCC将main（）函数的地址传入__libc_start_main来调用main（）函数，查看调用的参数即可找到main（）函数的地址</p>
+<p>IDA中的一类函数与众不同：函数列表中的底色为青色，在导航条中的对应区域也会显示青色。这实际上是IDA的<strong>FLIRT函数签名识别库</strong>在起作用</p>
+<p>HexRays绝大多数出错的原因是<strong>与这个函数相关的某些参数设置错误</strong></p>
+<p>（1）call analysis failed</p>
+<p>假如将sub_271010的类型从原来的”int_thiscall sub_271010(_ dword)”改为”int_cdecl sub_271010(_ dword)”,则反编译器会自动重新反编译进行刷新 </p>
+<p>错误的根源是反编译器在寻找函数调用的参数的时候出现了错误，这时只需根据对话框前面的地址，找到出错的位置，然后修复函数的原型声明即可。</p>
+<p>（2）sp-analysis failed</p>
+<p>错误的原因是，当优化等级较高时，编译器将省略帧指针rbp的调用，转而使用rsp引用所有的局部变量。为了找到局部变量，IDA通过跟踪每条指令对rsp的修改来查找并解析局部变量。但是IDA在跟踪rsp时出现了问题，导致反编译失败</p>
+<p>一般情况下的根源是<strong>某个函数调用的调用约定出错，或该函数的参数个数出错，导致IDA算错了栈指针的变化量</strong></p>
+</li>
+</ul>
+</div></div></article></section><nav class="paginator"><div class="paginator-inner"><span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/"><i class="fas fa-angle-right"></i></a></div></nav></div></div><div class="sidebar-wrap" id="sidebar-wrap"><aside class="sidebar" id="sidebar"><section class="sidebar-toc hide"></section><!-- ov = overview--><section class="sidebar-ov"><div class="sidebar-ov-author"><div class="sidebar-ov-author__avatar"><img class="sidebar-ov-author__avatar_img" src="/images/icons/obj.jpg" alt="avatar"></div><p class="sidebar-ov-author__text">cyny666</p></div><div class="sidebar-ov-state"><a class="sidebar-ov-state-item sidebar-ov-state-item--posts" href="/archives/"><div class="sidebar-ov-state-item__count">12</div><div class="sidebar-ov-state-item__name">归档</div></a></div><div class="sidebar-ov-cc"><a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en" target="_blank" rel="noopener" data-popover="知识共享许可协议" data-popover-pos="up"><img src="/images/cc-by-nc-sa.svg"></a></div></section></aside></div><div class="clearfix"></div></div></main><footer class="footer" id="footer"><div class="footer-inner"><div><span>Copyright © 2023</span><span class="footer__icon"><i class="fas fa-heart"></i></span><span>cyny666</span></div><div><span>由 <a href="http://hexo.io/" title="Hexo" target="_blank" rel="noopener">Hexo</a> 强力驱动</span><span> v6.3.0</span><span class="footer__devider">|</span><span>主题 - <a href="https://github.com/liuyib/hexo-theme-stun/" title="Stun" target="_blank" rel="noopener">Stun</a></span><span> v2.8.0</span></div></div></footer><div class="loading-bar" id="loading-bar"><div class="loading-bar__progress"></div></div><div class="back2top" id="back2top"><span class="back2top__icon"><i class="fas fa-rocket"></i></span></div></div><script src="https://cdn.jsdelivr.net/npm/jquery@v3.4.1/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/velocity-animate@1.5.2/velocity.min.js"></script><script src="https://cdn.jsdelivr.net/npm/velocity-animate@1.5.2/velocity.ui.min.js"></script><script src="/js/utils.js?v=2.8.0"></script><script src="/js/stun-boot.js?v=2.8.0"></script><script src="/js/scroll.js?v=2.8.0"></script><script src="/js/header.js?v=2.8.0"></script><script src="/js/sidebar.js?v=2.8.0"></script></body></html>
