@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>http://example.com/2023/12/21/Intigriti%20CTFBug%20Report%20Repo/</loc>
+    <loc>https://cyny666.github.io/2023/12/21/Intigriti%20CTFBug%20Report%20Repo/</loc>
     
     <lastmod>2023-12-23</lastmod>
     
@@ -11,7 +11,7 @@
   </url>
   
   <url>
-    <loc>http://example.com/2023/12/21/go%E6%90%AD%E5%BB%BAchatroom/</loc>
+    <loc>https://cyny666.github.io/2023/12/21/go%E6%90%AD%E5%BB%BAchatroom/</loc>
     
     <lastmod>2023-12-21</lastmod>
     
@@ -20,7 +20,7 @@
   </url>
   
   <url>
-    <loc>http://example.com/tags/index-3.html</loc>
+    <loc>https://cyny666.github.io/tags/index-3.html</loc>
     
     <lastmod>2023-12-21</lastmod>
     
@@ -29,7 +29,7 @@
   </url>
   
   <url>
-    <loc>http://example.com/tags/index-2.html</loc>
+    <loc>https://cyny666.github.io/tags/index-2.html</loc>
     
     <lastmod>2023-12-21</lastmod>
     
@@ -38,7 +38,7 @@
   </url>
   
   <url>
-    <loc>http://example.com/2023/12/21/jangow/</loc>
+    <loc>https://cyny666.github.io/2023/12/21/jangow/</loc>
     
     <lastmod>2023-12-21</lastmod>
     
@@ -47,7 +47,7 @@
   </url>
   
   <url>
-    <loc>http://example.com/tags/index-1.html</loc>
+    <loc>https://cyny666.github.io/tags/index-1.html</loc>
     
     <lastmod>2023-12-21</lastmod>
     
@@ -56,7 +56,7 @@
   </url>
   
   <url>
-    <loc>http://example.com/tags/index.html</loc>
+    <loc>https://cyny666.github.io/tags/index.html</loc>
     
     <lastmod>2023-12-21</lastmod>
     
@@ -65,7 +65,7 @@
   </url>
   
   <url>
-    <loc>http://example.com/categories/index-2.html</loc>
+    <loc>https://cyny666.github.io/categories/index-2.html</loc>
     
     <lastmod>2023-12-21</lastmod>
     
@@ -74,7 +74,7 @@
   </url>
   
   <url>
-    <loc>http://example.com/categories/index-1.html</loc>
+    <loc>https://cyny666.github.io/categories/index-1.html</loc>
     
     <lastmod>2023-12-21</lastmod>
     
@@ -83,7 +83,7 @@
   </url>
   
   <url>
-    <loc>http://example.com/categories/index.html</loc>
+    <loc>https://cyny666.github.io/categories/index.html</loc>
     
     <lastmod>2023-12-21</lastmod>
     
@@ -93,7 +93,7 @@
   
 
   <url>
-    <loc>http://example.com/</loc>
+    <loc>https://cyny666.github.io/</loc>
     <lastmod>2023-12-27</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
@@ -101,14 +101,14 @@
 
   
   <url>
-    <loc>http://example.com/tags/Web/</loc>
+    <loc>https://cyny666.github.io/tags/Web/</loc>
     <lastmod>2023-12-27</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>http://example.com/tags/go/</loc>
+    <loc>https://cyny666.github.io/tags/go/</loc>
     <lastmod>2023-12-27</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -117,14 +117,14 @@
 
   
   <url>
-    <loc>http://example.com/categories/WriteUp/</loc>
+    <loc>https://cyny666.github.io/categories/WriteUp/</loc>
     <lastmod>2023-12-27</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>http://example.com/categories/study-notes/</loc>
+    <loc>https://cyny666.github.io/categories/study-notes/</loc>
     <lastmod>2023-12-27</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
