@@ -1,6 +1,7 @@
+https://cyny666.github.io/2024/02/09/EnableMe/
+https://cyny666.github.io/2023/12/22/%E8%A5%BF%E6%B9%96%E8%AE%BA%E5%89%91%EF%BC%9Aeasy_raw/
 https://cyny666.github.io/2023/12/21/beginCTF/
-https://cyny666.github.io/2023/12/21/%E8%A5%BF%E6%B9%96%E8%AE%BA%E5%89%91%EF%BC%9Aeasy_raw/
-https://cyny666.github.io/2023/12/21/%E8%A5%BF%E6%B9%96%E8%AE%BA%E5%89%91%EF%BC%9Aeasy_tables/
+https://cyny666.github.io/2023/12/23/%E8%A5%BF%E6%B9%96%E8%AE%BA%E5%89%91%EF%BC%9Aeasy_tables/
 https://cyny666.github.io/about/index.html
 https://cyny666.github.io/2023/12/21/Intigriti%20CTFBug%20Report%20Repo/
 https://cyny666.github.io/2023/12/21/go%E6%90%AD%E5%BB%BAchatroom/
