@@ -1,3 +1,4 @@
+https://cyny666.github.io/2024/03/12/%E8%AE%B0%E7%AC%AC%E4%B8%80%E6%AC%A1edu-src%E6%BC%8F%E6%B4%9E%E6%8C%96%E6%8E%98/
 https://cyny666.github.io/2024/02/09/EnableMe/
 https://cyny666.github.io/2023/12/22/%E8%A5%BF%E6%B9%96%E8%AE%BA%E5%89%91%EF%BC%9Aeasy_raw/
 https://cyny666.github.io/2023/12/21/beginCTF/
@@ -15,9 +16,11 @@ https://cyny666.github.io/categories/index-1.html
 https://cyny666.github.io/categories/index.html
 https://cyny666.github.io/
 https://cyny666.github.io/tags/Web/
-https://cyny666.github.io/tags/go/
 https://cyny666.github.io/tags/Forensics/
-https://cyny666.github.io/tags/Misc/
+https://cyny666.github.io/tags/go/
 https://cyny666.github.io/tags/competitions/
+https://cyny666.github.io/tags/Misc/
+https://cyny666.github.io/tags/edu-src/
 https://cyny666.github.io/categories/WriteUp/
 https://cyny666.github.io/categories/study-notes/
+https://cyny666.github.io/categories/%E6%BC%8F%E6%B4%9E%E6%8C%96%E6%8E%98/
